@@ -5,7 +5,6 @@
 
 using namespace std;
 
-// 1. BASE CLASS
 class Asset {
 protected:
     string name;
@@ -17,7 +16,6 @@ public:
     virtual string toString() { return name + "," + to_string(value); }
 };
 
-// 2. DERIVED CLASS
 class Stock : public Asset {
 private:
     string ticker;
@@ -31,7 +29,6 @@ public:
     }
 };
 
-// 3. FILE MANAGER CLASS
 class PortfolioManager {
 private:
     string filename;
@@ -58,7 +55,6 @@ public:
     }
 };
 
-// 4. MAIN INTERFACE
 int main() {
     PortfolioManager myManager("portfolio.txt");
     int choice;
